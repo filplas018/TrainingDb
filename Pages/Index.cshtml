@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<table class="table">
+    <tr>
+        <th>Jméno</th>
+        <th>Velikost</th>
+        <th>Datum narození</th>
+        <th>LolRank</th>
+        <th>Adresa</th>
+        <th>Pojem</th>
+    </tr>
+    @foreach (var i in Model.Morodecs)
+    {
+        <tr>
+            <td>@i.Name</td>
+            <td>@i.Size</td>
+            <td>@i.Date</td>
+            <td>@i.LOLRank</td>
+            <td>@i.Address</td>
+            <td>@i.Term</td>
+        </tr>
+    }
+</table>
+<a href="./Add">Add to database</a>
